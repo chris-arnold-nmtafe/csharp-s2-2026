@@ -18,7 +18,8 @@ void MyFunction() {
 
 Console.WriteLine(Add(4, 5));
 Console.WriteLine(Add(5, 4));
-int Add(int a, int b) {
+
+int Add(int a, int b, int c=0) {
     if (a > b) {
         return a + b;
     }
@@ -26,4 +27,7 @@ int Add(int a, int b) {
 }
 
 
+for (int x = 0;x < 3;++x) {
+    Console.WriteLine(x);
+}
 
