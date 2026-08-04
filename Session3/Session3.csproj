@@ -8,10 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Anyas-Seasons\**" />
     <Compile Remove="NumberParser\**" />
     <Compile Remove="TimesTable\**" />
+    <EmbeddedResource Remove="Anyas-Seasons\**" />
     <EmbeddedResource Remove="NumberParser\**" />
     <EmbeddedResource Remove="TimesTable\**" />
+    <None Remove="Anyas-Seasons\**" />
     <None Remove="NumberParser\**" />
     <None Remove="TimesTable\**" />
   </ItemGroup>
