@@ -7,10 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="NumberParser\**" />
-    <EmbeddedResource Remove="NumberParser\**" />
-    <None Remove="NumberParser\**" />
-  </ItemGroup>
-
 </Project>
