@@ -5,4 +5,9 @@ Console.WriteLine("Hello, World!");
 Console.Write("How many bananas in a pile? ");
 string input = Console.ReadLine();
 
-Console.WriteLine($"There are {input} inputs in a line.");
+double bananaCount = double.Parse(input);
+//DateTime bananaCount = DateTime.Parse(input);
+
+Console.WriteLine($"There are {input} inputs in a line. " + 75.0.ToString("0.00"));
+
+
