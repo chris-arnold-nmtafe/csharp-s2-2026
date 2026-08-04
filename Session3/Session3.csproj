@@ -9,8 +9,11 @@
 
   <ItemGroup>
     <Compile Remove="NumberParser\**" />
+    <Compile Remove="TimesTable\**" />
     <EmbeddedResource Remove="NumberParser\**" />
+    <EmbeddedResource Remove="TimesTable\**" />
     <None Remove="NumberParser\**" />
+    <None Remove="TimesTable\**" />
   </ItemGroup>
 
 </Project>
