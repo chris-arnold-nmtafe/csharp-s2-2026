@@ -1,5 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+if (IsNumberInString("hal98things",98)) {
+    Console.WriteLine("Found number");
+}
+bool IsNumberInString(string text, int number) {
+    string toFind = number.ToString();
+    return text.Contains(toFind);
+    //foreach(char c in text) {
+    //    if (number.ToString() == c.ToString()) {
+    //        return true;
+    //    }
+    //}
+    return false;
+}
+
 
 //int mangosteensInPile = ReadNumber("How many mangosteens in a pile?");
 //Console.WriteLine(mangosteensInPile + " mangosteens in a pile.");
