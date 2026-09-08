@@ -23,11 +23,11 @@
         <Button Content="." Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="60,201,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="C" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="110,201,0,0" VerticalAlignment="Top" Click="Button_Click"/>
 
-        <Button Content="*" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,51,0,0" VerticalAlignment="Top" Click="Op_Click"/>
-        <Button Content="/" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,101,0,0" VerticalAlignment="Top" Click="Op_Click"/>
-        <Button Content="+" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,151,0,0" VerticalAlignment="Top" Click="Op_Click"/>
-        <Button Content="-" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,201,0,0" VerticalAlignment="Top" Click="Op_Click"/>
-        <Button Content="=" Width="190" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Click="Go_Click"/>
+        <Button Content="*" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,51,0,0" VerticalAlignment="Top" Click="Operator_Click"/>
+        <Button Content="/" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,101,0,0" VerticalAlignment="Top" Click="Operator_Click"/>
+        <Button Content="+" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,151,0,0" VerticalAlignment="Top" Click="Operator_Click"/>
+        <Button Content="-" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,201,0,0" VerticalAlignment="Top" Click="Operator_Click"/>
+        <Button Content="=" Width="190" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Click="Equals_Click"/>
         <!--Button Content="Button" HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Click="Button_Click_1"/-->
     </Grid>
 </Window>

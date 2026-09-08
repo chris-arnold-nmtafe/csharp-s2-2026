@@ -17,23 +17,12 @@ namespace Session_8
     /// </summary>
     public partial class MainWindow : Window
     {
-        static readonly Func<double, double, double> noOp = (x, y) => y;
 
         double previousNumber;
         double number = 0;
-        //string temporary = "";
         int decimals = 0;
-        //Watch out for crazy functional solution below!
-        //I'll redo this as a simpler implementation next week.
-        //If you can follow the code for entering a number, that's
-        //all the exercise was asking for.
-        Func<double,double,double> op = noOp;
-        Dictionary<string, Func<double, double, double>> ops = new() {
-            { "*" , (x,y)=>{ return x * y; } },
-            { "/" , (x,y)=>{ return x / y; } },
-            { "+" , (x,y)=>{ return x + y; } },
-            { "-" , (x,y)=>{ return x - y; } }
-        };
+        string operation = null;
+
 
         public MainWindow()
         {
@@ -76,6 +65,45 @@ namespace Session_8
             Exercise3 window = new Exercise3();
             window.Show();
         }
+
+        private void Operator_Click(object sender, RoutedEventArgs e) {
+            Equals_Click(sender, e);
+            Button button = sender as Button;
+            if (button != null) {
+                operation = button.Content.ToString();
+                ResetNumber();
+            }
+        }
+        private void Equals_Click(object sender, RoutedEventArgs e) {
+            if (operation == null) {
+                previousNumber = number;
+            } else if (operation == "*") {
+                previousNumber = previousNumber * number;
+            } else if (operation == "/") {
+                previousNumber = previousNumber / number;
+            } else if (operation == "+") {
+                previousNumber = previousNumber + number;
+            } else if (operation == "-") {
+                previousNumber = previousNumber - number;
+            }
+            operation = null;
+            numberDisplay.Content = previousNumber.ToString("$#,##0.##");
+            ResetNumber();
+        }
+
+
+        //Watch out for crazy functional solution below!
+        //I'll redo this as a simpler implementation next week.
+        //If you can follow the code for entering a number, that's
+        //all the exercise was asking for.
+        static readonly Func<double, double, double> noOp = (x, y) => y;
+        Func<double, double, double> op = noOp;
+        Dictionary<string, Func<double, double, double>> ops = new() {
+            { "*" , (x,y)=>{ return x * y; } },
+            { "/" , (x,y)=>{ return x / y; } },
+            { "+" , (x,y)=>{ return x + y; } },
+            { "-" , (x,y)=>{ return x - y; } }
+        };
 
         private void Op_Click(object sender, RoutedEventArgs e) {
             Go_Click(sender, e);
