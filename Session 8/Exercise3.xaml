@@ -1,0 +1,28 @@
+﻿<Window x:Class="Session_8.Exercise3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Session_8"
+        mc:Ignorable="d"
+        Title="Exercise3" Height="450" Width="800">
+    <!--wpf:Grid-->
+    <Border BorderThickness="5" BorderBrush="Bisque">
+        <TextBlock Margin="10" TextWrapping="Wrap" FontSize="18">
+        <Bold><Span BaselineAlignment="Center" Foreground="DarkTurquoise" FontSize="24">Tengu</Span></Bold>
+            <LineBreak/>
+by Joel Fagin<LineBreak/><LineBreak/>
+The clouds in the sky had blurred away but the samurai had his head bowed and did not notice. The air had changed, too,
+the breeze shifting around to be borne from a new sea, but the samurai’s path was winding so the direction was lost on him.
+The sun warmed slightly but his hat and cloak kept it from his skin and its shifting spectrum went unnoticed beneath the
+shadows of the trees.<LineBreak/><LineBreak/>
+But when the sound of the path changed beneath the stilt-like soles of his <Italic>geta</Italic> sandals, then he raised his eyes and noticed
+that the world had changed around him. He frowned as he saw the trees, oddly shaped to his eyes, smelt the new air, tainted
+with alchemical fumes, and looked upon the gravel beneath his feet, now less of a worn route through a forest than a laid
+path, cared for and maintained.<LineBreak/><LineBreak/>
+He looked back along the way he had come, eyes narrow. Then, he turned forwards again and continued walking, resting his
+hand on the hilt of his lone sword as he did so.
+        </TextBlock>
+    </Border>
+    <!--/wpf:Grid-->
+</Window>

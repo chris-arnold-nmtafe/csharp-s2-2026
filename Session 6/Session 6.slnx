@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../Lottery/Lottery.csproj" />
+  <Project Path="Session 6.csproj" />
+</Solution>
