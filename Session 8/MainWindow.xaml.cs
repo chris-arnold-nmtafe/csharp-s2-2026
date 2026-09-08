@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace Session_8
 {
@@ -16,13 +17,33 @@ namespace Session_8
     /// </summary>
     public partial class MainWindow : Window
     {
+        static readonly Func<double, double, double> noOp = (x, y) => y;
+
+        double previousNumber;
         double number = 0;
         //string temporary = "";
         int decimals = 0;
+        //Watch out for crazy functional solution below!
+        //I'll redo this as a simpler implementation next week.
+        //If you can follow the code for entering a number, that's
+        //all the exercise was asking for.
+        Func<double,double,double> op = noOp;
+        Dictionary<string, Func<double, double, double>> ops = new() {
+            { "*" , (x,y)=>{ return x * y; } },
+            { "/" , (x,y)=>{ return x / y; } },
+            { "+" , (x,y)=>{ return x + y; } },
+            { "-" , (x,y)=>{ return x - y; } }
+        };
+
         public MainWindow()
         {
             InitializeComponent();
             numberDisplay.Content = "$0";
+        }
+
+        private void ResetNumber() {
+            number = 0;
+            decimals = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
@@ -30,8 +51,7 @@ namespace Session_8
             if (button != null) {
                 string numString = button.Content.ToString();
                 if (numString=="C") {
-                    number = 0;
-                    decimals = 0;
+                    ResetNumber();
                 } else if (numString == ".") {
                     decimals = 1;
                 } else if (int.TryParse(numString,out int digit)) {
@@ -55,6 +75,25 @@ namespace Session_8
         private void Button_Click_1(object sender, RoutedEventArgs e) {
             Exercise3 window = new Exercise3();
             window.Show();
+        }
+
+        private void Op_Click(object sender, RoutedEventArgs e) {
+            Go_Click(sender, e);
+            Button button = sender as Button;
+            if (button != null) {
+                op = ops[button.Content.ToString()];
+            }
+            ResetNumber();
+        }
+
+        private void Go_Click(object sender, RoutedEventArgs e) {
+            double num1 = previousNumber;
+            double num2 = number;
+            double result = op(num1, num2);
+            previousNumber = result;
+            op = noOp;
+            numberDisplay.Content = previousNumber.ToString("$#,##0.##");
+            ResetNumber();
         }
     }
 }

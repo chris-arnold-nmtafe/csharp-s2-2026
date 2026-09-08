@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Session_8"
         mc:Ignorable="d"
-        Title="MainWindow" Height="312" Width="193">
+        Title="MainWindow" Height="350" Width="253">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
-            <Label x:Name="numberDisplay" Content="Label" Width="138" HorizontalAlignment="Left"/>
+            <Label x:Name="numberDisplay" Content="Label" Width="186" HorizontalAlignment="Center"/>
         </Border>
         <Button Content="7" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="8" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="60,51,0,0" VerticalAlignment="Top" Click="Button_Click"/>
@@ -22,6 +22,12 @@
         <Button Content="0" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="." Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="60,201,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="C" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="110,201,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+
+        <Button Content="*" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,51,0,0" VerticalAlignment="Top" Click="Op_Click"/>
+        <Button Content="/" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,101,0,0" VerticalAlignment="Top" Click="Op_Click"/>
+        <Button Content="+" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,151,0,0" VerticalAlignment="Top" Click="Op_Click"/>
+        <Button Content="-" Width="40" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,201,0,0" VerticalAlignment="Top" Click="Op_Click"/>
+        <Button Content="=" Width="190" Height="40" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Click="Go_Click"/>
+        <!--Button Content="Button" HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Click="Button_Click_1"/-->
     </Grid>
 </Window>
